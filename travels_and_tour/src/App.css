@@ -1,0 +1,599 @@
+
+
+
+/*header */ 
+
+@import url('https://fonts.googleapis.com/css?family=Sofia|Poppins|Mukta');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+
+header  {
+  width: 100%;
+height: 5rem;
+background-color: rgb(166, 13, 166);
+display: grid;
+grid-template-columns: 1fr 1fr;
+padding: 3px;
+transition: background-color 2s ease-in-out;
+position: fixed;
+top: 0;
+z-index: 1;
+}
+header .box1 {
+  display: grid;
+  grid-template-columns: 140px 120px 140px;
+  gap: 10px;
+}
+header .box1 input{
+height: 2rem;
+margin-top: 1.3rem;
+border-radius: 24px;
+border: transparent;
+}
+header .box1 input::placeholder{
+text-align: center;
+font-family: 'poppins';
+}
+header .inputDiv {
+  position: relative;
+}
+header i.fa-search {
+position: absolute;
+top: 25px;
+right: -20px;
+cursor: pointer;
+}                                
+
+header .logoStyle {
+  margin-top: 10px;
+  margin-left: 13px;
+  padding: 2px;
+  width: 2rem;
+  height: 3rem;
+  border-left: 7px solid white;
+  border-right: 13px solid white;
+  border-start-end-radius: 50px;
+  position: relative;
+}
+header .logoStyle::before{
+content: '';
+position: absolute;
+left: 0;
+width: 5rem;
+height: 4px;
+padding: 6px 0 0 0;
+margin-top: -2px;
+background-color: rgb(205, 205, 235);
+}
+header .logoStyle::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5rem;
+  height: 4px;
+  padding: 6px 0 0 0;
+  background-color: rgb(205, 205, 235);
+  }
+
+  header h2 {
+    color: rgb(227, 217, 236);
+    font-family: 'poppins';
+    font-size: 28px;
+    text-shadow: 2px 2px 1px rgb(33, 33, 91);
+    letter-spacing: 2px;
+  }
+
+
+  header h2::first-letter {
+font-size: 34px;
+  }
+
+header .box2 {
+  padding-top: 17px;
+  display: grid;
+  grid-template-columns: 50px 120px 90px;
+grid-gap: 30px;
+}
+header .box2 .navLink{
+  text-decoration: none;
+  font-family: 'mukta', sans-serif;
+  font-size: 17px;
+  color: rgb(251, 251, 253);
+  font-weight: bold;
+transition: 0.5s ease;
+}
+header .box2 .navLink:hover {
+color: black;
+}
+
+
+
+header .loginScroll {
+width: 100%;
+}
+header .btn {
+  position: relative;
+}
+
+header .loginScroll button{
+ background-color: rgb(250, 239, 164);
+ padding: 10px 25px;
+ color: rgb(75, 32, 32);
+ border: 3px solid rgb(241, 162, 175);
+ border-radius: 22px;
+ transition: 0.7s ease;
+ cursor: pointer;
+}
+header .loginScroll button:hover{ 
+background-color: rgb(63, 57, 16);
+color: white;
+}
+
+header i.fa-bars {
+  position: relative;
+  left: 30px;
+  top: 10px;
+  color: white;
+  cursor: pointer;
+}
+header .verticalNavLink {
+  background-color: rgb(0, 0, 0); 
+  padding: 50px;
+  position: absolute;
+ right: 0;
+ top: 100%;
+}
+header .verticalNavLink a{
+ display: block;
+ text-decoration: none;
+color: white;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin-top: 10px;
+text-align: center;
+padding: 3px 14px;
+font-size: 13px;
+position: relative;
+}
+header .verticalNavLink a::before{
+content: '';
+position: absolute;
+bottom: 0;
+left: 10px;
+width: 80px;
+height: 5px;
+background-color: aliceblue;
+}
+header .fa-sign-out {
+  position: absolute;
+  top: 20%;
+ left: 100%;
+  color: aliceblue;
+  margin-left: 15px;
+  cursor: pointer;
+    }
+   
+
+
+@media screen and (max-width: 900px){
+  header {
+    grid-gap: 100px;
+  }
+  header .box1 {
+    grid-template-columns: 70px 90px 120px;
+  
+  }
+  
+  
+  header input {
+width: 100%;
+ 
+  }
+  header input::placeholder{
+    font-size: 9px;
+  }
+  header h2 {
+font-size: 14px;
+  }
+
+  header i.fa-search {
+right: 10px;
+  }
+
+}
+
+/*navigate */
+
+.navigateLogin {
+width: 100%;
+padding-top: 7%;
+height: 100%;
+background-color: rgb(251, 248, 248);
+overflow: hidden;
+}
+.navigateSlider {
+  height: 100%;
+  display: grid;
+grid-template-columns: 1fr 1fr 300px 150px;
+transition: 1s ease;
+}
+
+.pageWelcomeNote {                              
+  width: 60vw;
+  height: 100%;
+background-color: rgb(243, 239, 230);
+background-image: url('images/tt3.webp');
+background-repeat: no-repeat;
+transition: 1s ease;
+}
+
+.pageWelcomeNote h1:nth-child(1){
+width: 15vw;
+padding: 20px;
+font-family: 'poppins';
+color: rgb(206, 161, 238);
+background-color: rgb(193, 146, 193);   
+border-radius: 32px;                      
+font-size: 2vw;                            
+text-align: center;                        
+animation: slideIn 2s linear forwards;
+transition: 0.4s ease;
+}
+
+
+@keyframes slideIn {
+  0%{transform: translateX(-200px);}
+  30%{width: 250px;}
+  60%{width: 350px;}
+  100%{transform: translateX(320px); background-color: rgb(238, 214, 214); color: rgb(78, 28, 78); height: 200px;}
+}
+
+.pageWelcomeNote h1:nth-child(2){
+  display: inline;
+background-color: rgb(64, 31, 95);
+height: 45px;
+font-size: 0;
+text-align: center;
+margin-top: 10px;
+padding: 10px;
+color: white;
+transform: translateX(-800px);
+animation: slideIn2 2s linear forwards;
+animation-delay: 2s;
+}
+
+@keyframes slideIn2 {      
+  0%{transform: translateX(-300px);}
+  30%{transform: translateX(-500px);}
+  60%{transform: translateX(30px);}
+  100%{transform: translateX(50px); font-size: 14px;}
+  
+
+}
+
+
+.travifyOffers {
+  width: 40vw;
+  height: 100%;
+  background-color: blueviolet;
+  overflow: hidden;
+}
+.travifyOffers .slider{
+width: 100%;
+height: 100%;
+transition: 0.5s ease;
+}
+
+.travifyOffers .slider .sliderItem{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;  
+align-items: center;              
+font-family: 'poppins';            
+font-size: 25px;                     
+font-weight: 300; 
+text-align: center;
+background-color: white;
+}
+
+.style_center {
+  width: 100%;
+  height: 100%;
+  background-color:rgb(253, 151, 253)
+}
+                                     
+                                   
+.login_signup {   
+  display: flex;      
+  justify-content: center;  
+  align-items: center;  
+  flex-direction: column;           
+  width: 100%;                       
+  height: 100%;
+  background-color:white;
+}
+
+.logsig {
+  width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.logsig span{
+text-align: center;
+background: linear-gradient(rgb(228, 211, 228), rgb(224, 217, 231));
+padding: 10px;
+font-family: 'mukta', sans-serif;
+cursor: pointer;
+position: relative;
+color: black;
+font-weight: bold;
+}
+.logsig span.active::before{
+content: '';
+position: absolute;
+bottom: 5px;
+left: 50px;
+width: 60px;
+height: 3px;
+background-color: white;
+}
+.login_signup_content {                   
+  display: flex;
+  justify-content: center;                      
+  align-items: center;                          
+ overflow: hidden;
+}
+
+.login_signup_slider {              
+
+width: 100%;
+display: flex;
+
+}
+
+
+
+.login_signup_slider h1 {
+  font-size: 12px;
+  font-family: 'mukta', sans-serif;
+}
+
+
+
+.infoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 70px;
+
+}
+.infoBox label{
+position: relative;
+}
+.infoBox input{
+  border-radius: 20px;
+}
+.infoBox.loginBox input{
+padding: 6px;
+border: 2px solid wheat;
+}
+.infoBox.signupBox input{
+padding: 4px;
+border: 2px solid rgb(242, 236, 226);   
+}
+
+.infoBox input::placeholder{
+
+color: rgb(202, 140, 140);
+text-align: center;
+}
+.infoBox div input[type='submit'] {
+width: 100%;
+margin-top: 12px;
+padding: 10px;
+background-color: rgb(69, 35, 69);
+border: none;
+color: white;
+font-size: 13px;
+cursor: pointer;
+}
+.infoBox div input[type='submit']:hover {
+filter: brightness(0.5);
+}
+
+.infoBox i{
+position: absolute;
+bottom: 0;
+right: 10px;
+}
+.infoBox i.fa-lock {
+bottom: 2px;
+}
+.loginBox a {
+  font-family: 'poppins';
+  padding: 5px;
+  margin-top: 4px;
+}
+.googleSignIn {
+  margin: 15px;
+  background-color: rgb(134, 69, 69);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid blueviolet;
+  border-radius: 40px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  margin: 50px;
+  animation: loaderSpin 2s ease infinite;
+}
+@keyframes loaderSpin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 900px){    
+  .navigateSlider {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+  }
+  .travifyOffers {
+height: 200px;
+  }
+  .travifyOffers .slider .sliderItem{
+font-size: 15px;
+  }
+
+  .logsig span.active::before{
+width: 200px;
+left: 50px;
+  }
+
+}
+@media screen and (max-width: 350px){    
+  .logsig span.active::before{
+ 
+    left: 20px;
+      }
+}
+
+
+
+/*VisitChoices*/
+.places  {
+  padding: 25px;
+background-color: rgb(253, 208, 208);
+  transform: translateY(150px);
+  border: 5px solid rgb(234, 190, 190);
+}
+.placesToVisit {
+  display: inline-block;
+  width: 25%;
+  padding-bottom: 10px;
+  background-color: white;        
+  border-radius: 15px;
+  margin: 10px;
+transform: translate(50%,-120px);
+overflow: hidden;
+}
+.placesToVisit img{
+width: 100%;
+border-top-left-radius: inherit;
+border-top-right-radius: inherit;
+transition: 0.4s ease;
+}
+
+.placesToVisit img:hover{
+transform: scale(1.1);
+}
+.touristCenter {
+  font-family: 'poppins';
+  padding-left: 9px;
+  font-size: 16px;
+}
+.location {
+  display: flex;
+gap: 5px;
+padding: 0 6px;
+}
+.location h3{
+  margin-top: 2px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: rgb(123, 97, 66);
+}
+.priceSec {
+  display: flex;
+gap: 50%;
+padding: 0 4px;
+}
+.crlx span{
+  display: block;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.priceSec h2 {
+  font-family: sans-serif;
+}
+.priceSec span button {
+  padding: 3px;
+  background-color: rgb(52, 17, 17);
+  color: white;
+  border: none;
+}
+.aboutTC {
+  font-size: 12px;
+padding: 7px;
+font-family: 'mukta';
+color: rgb(66, 43, 43);
+}
+.details {
+  padding: 6px 14px;
+  background: linear-gradient(rgb(71, 42, 42), rgb(96, 84, 84));
+margin-left: 8px;
+color: white;
+border: none;
+border-radius: 22px;
+}
+html {
+  scroll-behavior: smooth;
+ transition: 0.7s;
+
+}
+
+
+@media screen and (max-width: 900px){
+
+
+  .placesToVisit {
+width: 35%;
+
+  }
+  
+.priceSec h2 {
+  font-size: 19px;
+
+}
+}
+
+@media screen and (max-width: 600px){
+
+
+  .placesToVisit {
+width: 50%;
+  }
+  
+.priceSec h2 {
+font-size: 17px;
+}
+}
+@media screen and (max-width: 350px){
+
+
+  .placesToVisit {
+    display: block;
+width: 100%;
+transform: translate(0);
+  }
+ 
+
+}
+
+
+
